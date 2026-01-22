@@ -1,20 +1,26 @@
 <script setup lang="ts">
+import type { Task } from '../stores/task'
 
+const { task } = defineProps<{ task: Task }>()
 </script>
 
+<template >
 
-<template>
-   <div class="d-flex justify-content-center align-items-center vh-100 flex-wrapgit">
-    <div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h5 class="card-title">Titre</h5>
-   
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-    <p class="text-dark text-opacity-50" >Créé le: 2023-04-05</p>
-    <a href="#" class="btn btn-primary">Supprimer</a>
+     
+    <div class="d-flex justify-content-center align-items-center m-4 flex-wrap$  ">
+         <div class="card mt-4  h-100 " style="width: 18rem ">
+    <div class="card-body  ">
+      <h5 class="card-title">{{ task.titre }}</h5>
+      <p class="card-text">{{ task.description }}</p>
+      <p class="text-muted">
+        Créé le : {{ new Date(task.createdAt).toLocaleDateString() }}
+      </p>
+      <a href="" class="btn btn-primary">Voir les détails</a>
+    </div>
   </div>
-</div>
-   </div>
+    </div>
+ 
 </template>
-
-<style scoped></style>
+<style scoped>
+    
+</style>

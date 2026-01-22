@@ -8,6 +8,5 @@ export interface Task {
   description: string;
   completed : boolean;
   priorite: Priority;
-  terminee: boolean;
   createdAt: Date;
 }
