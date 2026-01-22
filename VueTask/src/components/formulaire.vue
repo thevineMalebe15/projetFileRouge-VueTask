@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import { ref } from 'vue';
+
+  
 
 </script>
 
@@ -27,6 +30,10 @@
       <option>Elevé</option>
       <option>Urgent</option>
     </select>
+  </div>
+  <div class="col-12">
+    <label for="inputDate">Date de création</label>
+    <input type="date" class="form-control" id="inputDate">
   </div>
 
   <div class="col-12">
