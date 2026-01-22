@@ -1,12 +1,13 @@
 <script setup lang="ts">
-import Taches from './views/taches.vue';
 
+import paramètre from './components/paramètre.vue';
 
 </script>
 
 <template>
 
   <Taches></Taches>
+  <paramètre></paramètre>
 
 </template>
 
