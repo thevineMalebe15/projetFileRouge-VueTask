@@ -7,6 +7,7 @@
   <h2 class="h2">Paramètres</h2>
   <button type="button" class="btn btn-danger ">Supprimer toutes les taches</button>
 </div>
+
 </template>
 
 <style scoped>
