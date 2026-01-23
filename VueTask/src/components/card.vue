@@ -1,7 +1,24 @@
 <script setup lang="ts">
+import { watch } from 'vue';
 import type { Task } from '../stores/task'
 
 const { task } = defineProps<{ task: Task }>()
+
+
+watch( // observe la variable passée en paramètre
+  () => task,
+  () => {
+    localStorage.setItem('task', JSON.stringify(task))
+  },
+  { deep: true },
+)
+
+const datatask = localStorage.getItem('task') // recuperer les données enregistrées
+
+if (datatask) {
+  task.value = JSON.parse(datatask)
+}
+
 </script>
 
 <template >
